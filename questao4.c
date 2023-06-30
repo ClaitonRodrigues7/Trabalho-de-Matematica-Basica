@@ -1,5 +1,5 @@
 #include <stdio.h>
-    #include <locale.h>
+
 
     #define MAX_SIZE 100
 
@@ -67,7 +67,7 @@
     }
 
     int main() {
-        setlocale(LC_ALL, "Portuguese");
+        
         int setA[MAX_SIZE], setB[MAX_SIZE];
         int tamA, tamB;
 
