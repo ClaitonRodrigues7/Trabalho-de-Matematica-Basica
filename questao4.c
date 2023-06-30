@@ -3,17 +3,16 @@
 
     #define MAX_SIZE 100
 
-    // Função para verificar se um elemento está presente em um conjunto
+   
     int Elementopresente(int arr[], int tam, int elemento) {
         for (int i = 0; i < tam; i++) {
             if (arr[i] == elemento) {
-                return 1; // O elemento está presente no conjunto
+                return 1; 
             }
         }
-        return 0; // O elemento não está presente no conjunto
+        return 0;
     }
 
-    // Função para realizar a intersecção entre dois conjuntos
     void interseccao(int setA[], int tamA, int setB[], int tamB) {
         int interseccaoSet[MAX_SIZE];
         int interseccaoTam = 0;
@@ -36,23 +35,23 @@
         }
     }
 
-    // Função para calcular a cardinalidade de um conjunto
+   
     int cardinalidade(int set[], int tam) {
         return tam;
     }
 
-    // Função para realizar a união entre dois conjuntos
+    
     void uniaoSet(int setA[], int tamA, int setB[], int tamB) {
         int uniaoSet[MAX_SIZE];
         int uniaoTam = 0;
 
-        // Copia os elementos do conjunto A para o conjunto união
+        
         for (int i = 0; i < tamA; i++) {
             uniaoSet[uniaoTam] = setA[i];
             uniaoTam++;
         }
 
-        // Adiciona os elementos do conjunto B que não estão presentes no conjunto união
+      
         for (int i = 0; i < tamB; i++) {
             if (!Elementopresente(uniaoSet, uniaoTam, setB[i])) {
                 uniaoSet[uniaoTam] = setB[i];
@@ -88,10 +87,10 @@
             scanf("%d", &setB[i]);
         }
 
-        // Calcula e exibe a intersecção dos conjuntos A e B
+       
         interseccao(setA, tamA, setB, tamB);
-    //
-        // Calcula e exibe as cardinalidades dos conjuntos A e B
+    
+    
         printf("Cardinalidade de A: %d e B: %d \n", tamA, tamB);
         printf("União dos conjuntos A e B: { ");
     for (int i = 0; i < tamA; i++) {
